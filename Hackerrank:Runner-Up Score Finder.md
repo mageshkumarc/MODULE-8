@@ -21,14 +21,18 @@ To write a Python program that takes a list of scores from participants and find
 ## 💻 PROGRAM:
 ```
 n = int(input())
-scores = list(map(int, input().split()))
-unique_scores = list(set(scores))
-unique_scores.sort()
-print(unique_scores[-2])
+arr = list(map(int, input().split()))
+arr.sort()
+large=arr[-1]
+arr.reverse()
+for i in range(len(arr)-1):
+    if arr[i+1]<arr[i]:
+        print(arr[i+1])
+        break
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/1e2421e1-7869-4d14-a70c-54846c46bac0)
+![image](https://github.com/user-attachments/assets/3eec368b-da05-4502-b0c6-e91642d6010b)
 
 ## RESULT
 Thus,the program is executed successfully
