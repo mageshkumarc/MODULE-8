@@ -29,26 +29,21 @@ To maintain a dictionary of students with their marks in five subjects, calculat
 
 ## 💻 PROGRAM:
 ```
-student_marks = {
-    'Alice': [85, 90, 78, 92, 88],
-    'Bob': [75, 80, 70, 85, 90],
-    'Charlie': [90, 95, 85, 87, 93]
-}
+n=int(input())
+records={}
 
-total_marks = {}
-
-for student in student_marks:
-    total = sum(student_marks[student])
-    total_marks[student] = total
-
-topper = max(total_marks, key=total_marks.get)
-
-print("Total Marks:", total_marks)
-print("Topper:", topper, "with", total_marks[topper], "marks")
+for _ in range(n):
+    data=input().split()
+    name,scores=data[0],list(map(float,data[1:]))
+    records[name]=scores
+    
+query_name=input()
+average=sum(records[query_name])/len(records[query_name])
+print(f"{average:.2f}")
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/2aac75ee-1c78-42a8-87fd-45fb8c6729fe)
+![image](https://github.com/user-attachments/assets/54d08cec-feb4-4a2e-bcce-d6b1392cc0e0)
 
 ## RESULT
 Thus,the program is executed successfully
